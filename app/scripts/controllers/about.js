@@ -8,10 +8,12 @@
  * Controller of the siscotApp
  */
 angular.module('siscotApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('AboutCtrl', ['$scope', function ($scope) {
+    var vm = this; // this is a good practice, you can use vm instead of $scope
+
+    vm.myFunction = function () {
+      console.log('hey felix')
+    }
+
+    vm.myFunction();
+  }]);
