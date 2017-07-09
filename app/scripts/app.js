@@ -22,7 +22,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/cotizaciones.html',
-        controller: 'MainCtrl',
+        controller: 'cotizacionesCtrl',
         controllerAs: 'vm'
       })
       .when('/about', {
