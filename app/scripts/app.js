@@ -30,7 +30,12 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'vm'
       })
-      .when('/hola', {
+      .when('/inicio', {
+        templateUrl: 'views/inicio.html',
+        controller: 'HolaCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/cargarlista', {
         templateUrl: 'views/hola.html',
         controller: 'HolaCtrl',
         controllerAs: 'vm'

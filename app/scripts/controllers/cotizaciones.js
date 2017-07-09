@@ -8,16 +8,21 @@
  * Controller of the siscotApp
  */
 angular.module('siscotApp')
-    .controller('cotizacionesCtrl', ['$scope', function ($scope) {
+    .controller('cotizacionesCtrl', ['$scope', '$http', function ($scope, $http) {
 
+        $http.get('http://localhost:3000/cotizaciones/').then(function (r) {
+            $scope.model = r.data;
+        }, function (error){
 
-
-        $scope.alumnos = [{ "nombre": "Jossy", "telefono": "99735142", "curso": "tercero" },
-        { "nombre": "Chemo", "telefono": "4343222", "curso": "Primero" },
-        { "nombre": "nasser", "telefono": "1123323", "curso": "Segundo" },
-        { "nombre": "felix", "telefono": "1324324543", "curso": "quinto" }
-        ];
+    console.log("hola");
+        });
         
+        $scope.alumnos = [{ "nombre": "Jossy", "telefono": "99735142", "curso": "tercero" },
+            { "nombre": "Chemo", "telefono": "4343222", "curso": "Primero" },
+            { "nombre": "nasser", "telefono": "1123323", "curso": "Segundo" },
+            { "nombre": "felix", "telefono": "1324324543", "curso": "quinto" }
+            ];
+
         var vm = this;
 
     }]);
