@@ -11,7 +11,7 @@ angular.module('siscotApp')
     .controller('cotizacionesCtrl', ['$scope', '$http', function ($scope, $http) {
 
         $http.get('http://localhost:3000/cotizaciones/').then(function (r) {
-            $scope.model = r.data;
+            $scope.cotizaciones = r.data;
         }, function (error){
 
     console.log("hola");
